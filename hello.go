@@ -25,6 +25,7 @@ func main() {
 	//fmt.Printf("%T,%v", a, a)
 	fmt.Print(a)
 	fmt.Print("-----------------")
+	fmt.Print("-----------------")
 	var a int = 32
 	fmt.Printf("%T,%v", a, a)
 	var b string
