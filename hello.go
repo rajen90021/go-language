@@ -23,7 +23,8 @@ func main() {
 	//	fmt.Printf("b=%v, c=%v", b, c)
 	//fmt.Println(a, b, c)
 	//fmt.Printf("%T,%v", a, a)
-	//fmt.Print(a)
+	fmt.Print(a)
+	fmt.Print("-----------------")
 	var a int = 32
 	fmt.Printf("%T,%v", a, a)
 	var b string
