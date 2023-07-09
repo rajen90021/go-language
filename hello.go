@@ -2,34 +2,22 @@ package main
 
 import (
 	"fmt"
-	"strconv"
+	"time"
 )
 
-//package level
-// var (
-// 	a float32 = 12
-// 	b string  = "adarsh"
-// 	c string  = "aduu "
-// )
+// Function that runs concurrently as a goroutine
+func count(name string) {
+	for i := 1; i <= 5; i++ {
+		fmt.Println(name, ":", i)
+		time.Sleep(time.Millisecond * 500)
+	}
+}
 
 func main() {
-	//var a int //decelaration
-	//a = 12    //intialization
+	// Create two goroutines
+	go count("goroutine 1")
+	go count("goroutine 2")
 
-	///declaration with initialization
-	//var b float32 = 133
-	//	c := 123
-	//fmt.Println("c=", c)
-	//	fmt.Printf("b=%v, c=%v", b, c)
-	//fmt.Println(a, b, c)
-	//fmt.Printf("%T,%v", a, a)
-	fmt.Print(a)
-	fmt.Print("-----------------")
-	fmt.Print("-----------------")
-	var a int = 32
-	fmt.Printf("%T,%v", a, a)
-	var b string
-	b = strconv.Itoa(a)
-	fmt.Printf(" %T,%v", b, b)
-
+	// Allow goroutines to execute
+	time.Sleep(time.Second * 3)
 }
